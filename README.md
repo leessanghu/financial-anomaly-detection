@@ -20,3 +20,11 @@
     <img alt="GH pull requests" src="https://img.shields.io/github/issues-pr/kyechan99/capsule-render?color=779669" />
   </a>
 </p>
+
+<p align="center">
+  <h3 align="center">📊 비정상 거래 패턴 탐지 프로젝트</h3>
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?lines=Data+Mining+Based+Abnormal+Trading+Pattern+Detection;Isolation+Forest+%2B+DBSCAN+%2B+KMeans;Detecting+Abnormal+Market+Signals;Feature+Engineering+for+Financial+Time+Series;Visualizing+Trading+Behavior+Patterns&font=Fira%20Code&center=true&width=750&height=50&duration=3500&pause=1000" alt="Typing SVG">
+</p>
