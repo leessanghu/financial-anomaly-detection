@@ -744,16 +744,7 @@ results/figures/
 
 ---
 
-## 19. Team Members
-
-| Name         | Role                                               |
-| ------------ | -------------------------------------------------- |
-| leessanghu   | Repository owner, data mining pipeline development |
-| Team Members | 데이터 수집, EDA, 피처 엔지니어링, 모델링, 결과 해석                  |
-
----
-
-## 20. References
+## 19. References
 
 * yfinance Documentation
   https://ranaroussi.github.io/yfinance/
@@ -772,7 +763,7 @@ results/figures/
 
 ---
 
-## 21. Conclusion
+## 20. Conclusion
 
 본 프로젝트는 국내 주식 OHLCV 데이터를 활용하여 비정상 거래 패턴을 탐지하고 유형화한 데이터마이닝 프로젝트입니다.
 
