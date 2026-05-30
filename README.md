@@ -10,7 +10,7 @@
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com/?lines=Data+Mining+Based+Abnormal+Trading+Pattern+Detection;Isolation+Forest+%2B+DBSCAN+%2B+KMeans;Detecting+Abnormal+Market+Signals;Feature+Engineering+for+Financial+Time+Series;Visualizing+Trading+Behavior+Patterns&font=Fira%20Code&center=true&width=750&height=50&duration=3500&pause=1000" alt="Typing SVG">
 </p>
-````markdown
+
 # 📈 Financial Anomaly Detection
 
 > 국내 주식 OHLCV 데이터를 활용하여 거래량 급증, 수익률 급변, 변동성 확대, 캔들 패턴 이상 신호를 탐지하고 유형화하는 데이터마이닝 기반 이상 거래 탐지 프로젝트
