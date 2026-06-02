@@ -471,7 +471,7 @@ flowchart LR
 ```
 
 <p align="center">
-  <img src="./results/figures/baseline1_01_anomaly_detection_result.png" width="720"/>
+  <img src="./results/figures/baseline1_01_anomaly_detection_scatter.png" width="720"/>
 </p>
 <p align="center"><b>Figure 1. Baseline 1 Anomaly Detection Result</b></p>
 
@@ -499,7 +499,7 @@ Threshold 후보는 95%, 97%, 99%를 검토하였다.
 ## 7.4 Baseline 1 결과
 
 <p align="center">
-  <img src="./results/figures/baseline1_02_cluster_feature_bar.png" width="760"/>
+  <img src="./results/figures/baseline1_02_cluster_feature_barplot.png" width="760"/>
 </p>
 <p align="center"><b>Figure 2. Baseline 1 Cluster Feature Comparison</b></p>
 
