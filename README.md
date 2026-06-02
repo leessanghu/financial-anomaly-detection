@@ -470,7 +470,9 @@ flowchart LR
     D --> E[거래량 기반 이상 패턴 해석]
 ```
 
-<img width="716" height="551" alt="image" src="https://github.com/user-attachments/assets/40bc5dc6-daa9-4ba2-8eb1-369bfedc60b9" />
+<p align="center">
+  <img src="./results/figures/baseline1_01_anomaly_detection_result.png" width="720"/>
+</p>
 <p align="center"><b>Figure 1. Baseline 1 Anomaly Detection Result</b></p>
 
 위 시각화는 `volume_ma20_ratio`를 기준으로 97% threshold를 초과한 거래를 이상치로 탐지한 결과이다. 대부분의 정상 거래는 낮은 거래량 비율 구간에 밀집되어 있으며, 이상치로 탐지된 거래는 평소 대비 거래량이 크게 증가한 구간에 분포한다.
@@ -496,12 +498,16 @@ Threshold 후보는 95%, 97%, 99%를 검토하였다.
 
 ## 7.4 Baseline 1 결과
 
-<img width="988" height="660" alt="그림1" src="https://github.com/user-attachments/assets/d37eb8da-c73d-4eb6-bb8e-89b7a1585010" />
+<p align="center">
+  <img src="./results/figures/baseline1_02_cluster_feature_bar.png" width="760"/>
+</p>
 <p align="center"><b>Figure 2. Baseline 1 Cluster Feature Comparison</b></p>
 
 이 그림은 Baseline 1에서 탐지된 이상치를 KMeans로 군집화한 뒤, 각 군집의 주요 피처 평균을 비교한 결과이다. 거래량 기반 이상치 안에서도 `vol_chg_rate`, `upper_shadow_ratio`, `body_ratio`, `upper_shadow_streak_5d` 등이 다르게 나타나므로, 거래량 이상치 내부에도 서로 다른 패턴이 존재함을 확인할 수 있다.
 
-<img width="1099" height="793" alt="그림2" src="https://github.com/user-attachments/assets/160bf62e-09ae-45c8-b195-ba29f1882c43" />
+<p align="center">
+  <img src="./results/figures/baseline1_04_silhouette_comparison.png" width="720"/>
+</p>
 <p align="center"><b>Figure 3. Baseline 1 Silhouette Score Comparison</b></p>
 
 Baseline 1의 Silhouette Score는 Train 0.275, Validation 0.221, Test 0.193으로 나타났다. 이는 거래량 단일 변수 기반 이상치 탐지가 일정 수준의 군집 구조는 만들 수 있지만, 복합적인 이상 거래 패턴을 안정적으로 구분하기에는 한계가 있음을 보여준다.
@@ -553,7 +559,9 @@ flowchart LR
 
 ## 8.3 K 선택 및 결과
 
-<img width="1053" height="745" alt="그림3" src="https://github.com/user-attachments/assets/66ee11ca-0235-466b-90c5-0e91795a0e3d" />
+<p align="center">
+  <img src="./results/figures/baseline2_02_silhouette_comparison.png" width="720"/>
+</p>
 <p align="center"><b>Figure 4. Baseline 2 Silhouette Score Comparison</b></p>
 
 Baseline 2는 전체 데이터를 바로 KMeans로 군집화했기 때문에 Baseline 1보다 높은 Silhouette Score를 보였다. 그러나 전체 데이터의 대부분이 일반 거래 군집에 집중되므로, 점수는 높더라도 비정상 거래 내부의 세부 유형을 해석하는 데에는 한계가 있다.
@@ -755,7 +763,9 @@ Cluster 0은 일반적인 거래량 급증형이나 윗꼬리 반복형과 구�
 
 ## 9.10 Feature Importance
 
-<img width="441" height="230" alt="그림4" src="https://github.com/user-attachments/assets/7c7b9e5e-dc6e-47e1-bc22-bbe2c6647003" />
+<p align="center">
+  <img src="./results/figures/main_model_feature_importance.png" width="720"/>
+</p>
 <p align="center"><b>Figure 7. Main Model Feature Importance</b></p>
 
 Main Model V1의 군집 레이블을 Random Forest로 예측하도록 학습한 뒤, Feature Importance를 분석하였다.
@@ -823,7 +833,9 @@ Main Model V2는 Validation/Test Silhouette Score가 V1보다 높게 나타나�
 
 ## 11.1 Silhouette Score 비교
 
-<img width="1379" height="746" alt="그림5" src="https://github.com/user-attachments/assets/7efd9c83-c7b3-4bcf-97be-32ebe48516cf" />
+<p align="center">
+  <img src="./results/figures/final_model_silhouette_comparison.png" width="860"/>
+</p>
 <p align="center"><b>Figure 8. Model Silhouette Score Comparison</b></p>
 
 전체 모델 비교 결과 Baseline 2와 Main Model V2가 Validation/Test에서 더 높은 Silhouette Score를 보였다. 그러나 본 프로젝트의 목적은 단순히 군집 점수를 높이는 것이 아니라, 비정상 거래 패턴을 해석 가능한 유형으로 분류하는 것이므로 최종 모델은 Main Model V1로 선정하였다.
