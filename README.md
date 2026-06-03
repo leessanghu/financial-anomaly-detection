@@ -1052,39 +1052,44 @@ financial-anomaly-detection
 │
 ├── data
 │   └── processed
-│       ├── train_features.csv
-│       ├── valid_features.csv
-│       ├── test_features.csv
 │       ├── anomaly_cluster_result.csv
 │       ├── cluster_profile_raw.csv
-│       └── cluster_profile_scaled.csv
+│       ├── cluster_profile_scaled.csv
+│       ├── test_features.csv
+│       ├── train_features.csv
+│       └── valid_features.csv
 │
 ├── notebooks
-│   ├── 01_step1_data_ingestion.ipynb
-│   ├── 02_step2_time_series_split.ipynb
-│   ├── 03_step3_anomaly_eda_clipping.ipynb
-│   ├── 04_step4_multivariate_feature_engineering.ipynb
-│   ├── 05_step5.1_base_model_1.ipynb
-│   ├── 05_step5.2_base_model_2.ipynb
-│   ├── 06_step6_main_model.ipynb
-│   └── 06_step6_main_model_.ipynb
+│   ├── 01_Step1_Data.ipynb
+│   ├── 01_Step2_Data.ipynb
+│   ├── 01_Step3_Data.ipynb
+│   ├── 01_Step4_Data.ipynb
+│   ├── 02_Baseline_1.ipynb
+│   ├── 03_Baseline_2.ipynb
+│   └── 04_Main_model.ipynb
 │
 ├── results
 │   └── figures
-│       ├── base_model1_result.png
-│       ├── base_model2_result.png
+│       ├── baseline1_01_anomaly_detection_scatter.png
+│       ├── baseline1_02_cluster_feature_barplot.png
+│       ├── baseline1_04_silhouette_comparison.png
+│       ├── baseline2_01_pca_cluster_scatter.png
+│       ├── baseline2_02_silhouette_comparison.png
+│       ├── cluster1_representative_case.png
+│       ├── cluster2_representative_case.png
 │       ├── eda2_volume_distribution.png
 │       ├── eda3_volatility_distribution.png
 │       ├── eda4_volume_vs_volatility_en.png
 │       ├── eda5_candlestick_anomaly_en.png
 │       ├── eda6_feature_correlation_en.png
 │       ├── eda7_anomaly_existence_en.png
-│       ├── cluster1_representative_case.png
-│       └── cluster2_representative_case.png
+│       ├── final_model_silhouette_comparison.png
+│       ├── main_01_if_score_distribution.png
+│       └── main_model_feature_importance.png
 │
-├── README.md
+├── .gitignore
 ├── LICENSE
-└── .gitignore
+└── README.md
 ```
 
 ---
@@ -1116,16 +1121,15 @@ pip install pandas numpy matplotlib seaborn scikit-learn yfinance
 
 노트북은 다음 순서대로 실행하는 것을 권장한다.
 
-| 순서 | 파일명                                               | 설명                           |
-| -: | ------------------------------------------------- | ---------------------------- |
-|  1 | `01_step1_data_ingestion.ipynb`                   | 데이터 수집                       |
-|  2 | `02_step2_time_series_split.ipynb`                | 시계열 Train/Validation/Test 분할 |
-|  3 | `03_step3_anomaly_eda_clipping.ipynb`             | EDA 및 이상 분포 확인               |
-|  4 | `04_step4_multivariate_feature_engineering.ipynb` | 8개 파생 피처 생성                  |
-|  5 | `05_step5.1_base_model_1.ipynb`                   | Baseline 1 실험                |
-|  6 | `05_step5.2_base_model_2.ipynb`                   | Baseline 2 실험                |
-|  7 | `06_step6_main_model.ipynb`                       | Main Model 학습 및 해석           |
-|  8 | `06_step6_main_model_.ipynb`                      | Main Model 추가 실험 및 비교        |
+| 순서 | 파일명 | 설명 |
+| -: | --- | --- |
+| 1 | `01_Step1_Data.ipynb` | 원천 데이터 수집 및 기본 데이터 구성 |
+| 2 | `01_Step2_Data.ipynb` | 시계열 Train/Validation/Test 분할 |
+| 3 | `01_Step3_Data.ipynb` | EDA 및 이상 분포 확인 |
+| 4 | `01_Step4_Data.ipynb` | 8개 파생 피처 생성 |
+| 5 | `02_Baseline_1.ipynb` | Baseline 1 실험 |
+| 6 | `03_Baseline_2.ipynb` | Baseline 2 실험 |
+| 7 | `04_Main_model.ipynb` | Main Model 학습, 군집화 결과 해석 및 최종 비교 |
 
 ---
 
